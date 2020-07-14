@@ -345,10 +345,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8263290934416176066, guid: 1e134eebee295034ab0e934aa9dc2011,
+        type: 3}
+      propertyPath: maxProjetil
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263290934416176066, guid: 1e134eebee295034ab0e934aa9dc2011,
+        type: 3}
+      propertyPath: projetils
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263290934416176066, guid: 1e134eebee295034ab0e934aa9dc2011,
+        type: 3}
+      propertyPath: projetil
+      value: 
+      objectReference: {fileID: 1919982245592160281, guid: 19d0bc8fd54dc274b9bbbbfd2c3cc2d1,
+        type: 3}
     - target: {fileID: 8263290934416176070, guid: 1e134eebee295034ab0e934aa9dc2011,
         type: 3}
       propertyPath: m_Name
       value: Nave
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263290934416176070, guid: 1e134eebee295034ab0e934aa9dc2011,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e134eebee295034ab0e934aa9dc2011, type: 3}
