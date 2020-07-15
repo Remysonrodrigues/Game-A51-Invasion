@@ -35,7 +35,11 @@ public class NaveController : MonoBehaviour
         {
             if ( projetils > 0)
             {
-                Instantiate(projetil, transform.position, transform.rotation);
+                Instantiate(
+                              projetil, 
+                              transform.position + new Vector3(0, -0.1f, 0), 
+                              transform.rotation
+                            );
                 projetils -= 1;
             }            
         }
