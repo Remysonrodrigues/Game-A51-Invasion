@@ -7,6 +7,7 @@ public class projetilController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //explosionAnimator = GetComponent<Animator>();
         StartCoroutine(HoraDeDestruir());
     }
 
@@ -16,13 +17,13 @@ public class projetilController : MonoBehaviour
         transform.position += new Vector3(0, -0.1f, 0);
     }
 
-    private void OnCollisionEnter(Collision coli)
+    void OnCollisionEnter2D(Collision2D coli)
     {
-        if (coli.gameObject.tag != "Player")
-        {
-            Destroy(coli.gameObject);
-            Destroy(gameObject);                    
-        }
+        //explosionAnimator.SetBool("ProjetilExplosion", true);
+        //if (coli.gameObject.tag != "Player")
+        //Instantiate(explosion, coli.transform.position, coli.transform.rotation);
+        // Destroy(coli.gameObject);
+        //Destroy(gameObject);                    
     }
 
     IEnumerator HoraDeDestruir()
