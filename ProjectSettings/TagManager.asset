@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Inimigo1
+  - Inimigo2
+  - Inimigo3
+  - Inimigo4
   layers:
   - Default
   - TransparentFX

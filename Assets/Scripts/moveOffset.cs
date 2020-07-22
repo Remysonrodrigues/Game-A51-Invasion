@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class moveOffset : MonoBehaviour
 {
@@ -17,8 +18,7 @@ public class moveOffset : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        escalaMovimento += 0.01f;   
-
-        materialAtual.SetTextureOffset("_MainTex", new Vector2(escalaMovimento * velocidadeX, 0));
+        escalaMovimento += 0.01f; 
+        materialAtual.SetTextureOffset("_MainTex", new Vector2(escalaMovimento * velocidadeX, 0));            
     }
 }
