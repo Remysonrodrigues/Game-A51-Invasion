@@ -46,12 +46,21 @@ public class inimigoController : MonoBehaviour
 
     IEnumerator Disparar()
     {
-        Instantiate(
-                    projetil, 
-                    transform.position + new Vector3(-0.2f, 0.9f, 0), 
-                    transform.rotation
-                    );
-        yield return new WaitForSeconds(1);
-        StartCoroutine(Disparar());
+        GameObject nave = GameObject.Find("Nave");
+
+        if(nave != null)
+        {
+            GameObject disparo = (GameObject) Instantiate(projetil);
+
+            disparo.transform.position = transform.position;
+
+            Vector3 direction = nave.transform.position - disparo.transform.position;
+
+            disparo.GetComponent<projetilInimigoController>().SetDirection(direction);
+
+            yield return new WaitForSeconds(1);
+            
+            StartCoroutine(Disparar());
+        }
     }
 }

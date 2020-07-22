@@ -4,16 +4,41 @@ using UnityEngine;
 
 public class projetilInimigoController : MonoBehaviour
 {
+    public float speed;
+    private Vector3 _direction;
+    public bool isReady;
+
+    void Awake()
+    {
+        speed = 5f;
+        isReady =  false;
+    }
+
      // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(HoraDeDestruir());
     }
 
+    public void SetDirection(Vector3 direction)
+    {
+        _direction = direction.normalized;
+        isReady = true;
+
+    }
+
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(0.0f, 0.1f, 0.0f);
+        if(isReady)
+        {
+            Vector3 position = transform.position;
+
+            position += (_direction * speed * Time.deltaTime);
+
+            transform.position = position;
+
+        }
     }
 
     private void OnCollisionEnter(Collision coli)
