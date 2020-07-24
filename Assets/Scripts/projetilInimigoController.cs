@@ -41,12 +41,10 @@ public class projetilInimigoController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision coli)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (coli.gameObject.tag != "Player")
-        {
-            Destroy(coli.gameObject);
-            Destroy(gameObject);                    
+        if (col.name == "Nave") {
+            Destroy(gameObject);
         }
     }
 

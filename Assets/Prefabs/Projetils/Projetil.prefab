@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6483586477740268474}
   - component: {fileID: 5231150466563730805}
   - component: {fileID: 2723337532313306054}
+  - component: {fileID: -4240242555992790677}
   m_Layer: 0
   m_Name: Projetil
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1919982245592160281}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.29898688, y: -0.67351466, z: -1.0673652}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -116,3 +117,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19c27d166a25c6e4dab2ff5d96560e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &-4240242555992790677
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919982245592160281}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.12, y: 0.48}
+  m_Direction: 0

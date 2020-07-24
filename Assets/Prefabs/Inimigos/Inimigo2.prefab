@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: -1897747248240335854}
   - component: {fileID: -2011449773965833142}
   - component: {fileID: -3110762678841005578}
+  - component: {fileID: 8055355517121609989}
   m_Layer: 0
   m_Name: Inimigo2
   m_TagString: Inimigo2
@@ -287,7 +288,22 @@ MonoBehaviour:
   projetil: {fileID: 1170200983840435713, guid: b2166d25b1b547749bdfc876ce8b30bc,
     type: 3}
   life: 5
-  velociadeMove: 0
+--- !u!70 &8055355517121609989
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5899844022361113678}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.1925846, y: 1.2763314}
+  m_Size: {x: 3.4517295, y: 4.4660797}
+  m_Direction: 0
 --- !u!1 &5899844022462924841
 GameObject:
   m_ObjectHideFlags: 0

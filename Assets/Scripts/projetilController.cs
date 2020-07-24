@@ -7,7 +7,6 @@ public class projetilController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //explosionAnimator = GetComponent<Animator>();
         StartCoroutine(HoraDeDestruir());
     }
 
@@ -23,7 +22,9 @@ public class projetilController : MonoBehaviour
         //if (coli.gameObject.tag != "Player")
         //Instantiate(explosion, coli.transform.position, coli.transform.rotation);
         // Destroy(coli.gameObject);
-        //Destroy(gameObject);                    
+        if (coli.gameObject.tag != "Player") {
+            Destroy(gameObject);
+        }
     }
 
     IEnumerator HoraDeDestruir()
