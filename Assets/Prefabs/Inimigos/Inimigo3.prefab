@@ -233,8 +233,8 @@ MonoBehaviour:
   - {fileID: 4266486133723871427}
   - {fileID: 4266486134381978663}
   m_Bounds:
-    m_Center: {x: 1.3011788, y: 1.2958429, z: 0}
-    m_Extent: {x: 1.8298372, y: 2.305835, z: 0}
+    m_Center: {x: 1.3011788, y: 1.2958424, z: 0}
+    m_Extent: {x: 1.8298372, y: 2.3058355, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!95 &4266486133894567409
@@ -287,10 +287,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 1.37, y: 8.53}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -301,7 +301,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.12, y: 10.24}
+  m_Size: {x: 4.48, y: 20}
   m_EdgeRadius: 0
 --- !u!114 &-4604204066326341934
 MonoBehaviour:
