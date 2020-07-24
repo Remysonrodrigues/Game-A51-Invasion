@@ -8,6 +8,8 @@ TagManager:
   - Inimigo2
   - Inimigo3
   - Inimigo4
+  - projetil
+  - Forte
   layers:
   - Default
   - TransparentFX

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3192770725263975673}
   - component: {fileID: 3192770725263975654}
-  - component: {fileID: 3192770725263975672}
+  - component: {fileID: 5617370518289826282}
   m_Layer: 0
   m_Name: Forte3
   m_TagString: Untagged
@@ -82,8 +82,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &3192770725263975672
-PolygonCollider2D:
+--- !u!61 &5617370518289826282
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,12 +105,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.26, y: 0.265}
-      - {x: -0.28, y: 0.265}
-      - {x: -0.42, y: -0.035}
-      - {x: -0.42, y: -0.24499999}
-      - {x: 0.42, y: -0.24499999}
-      - {x: 0.42, y: -0.044999998}
-      - {x: 0.28, y: 0.255}
+  serializedVersion: 2
+  m_Size: {x: 1.65, y: 0.96}
+  m_EdgeRadius: 0

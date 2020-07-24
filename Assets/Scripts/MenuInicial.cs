@@ -14,7 +14,7 @@ public class MenuInicial : MonoBehaviour
             primeiraVez++;
         }
         else{
-             UnityEngine.SceneManagement.SceneManager.LoadScene("SceneFase1");
+             UnityEngine.SceneManagement.SceneManager.LoadScene("SceneFase3");
         }
     }
     public void menu()
@@ -30,7 +30,7 @@ public class MenuInicial : MonoBehaviour
     {
          if(Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("SceneFase1");     
+            SceneManager.LoadScene("SceneFase3");     
         }
     }
 
