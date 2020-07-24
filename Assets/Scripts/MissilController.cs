@@ -5,8 +5,11 @@ using UnityEngine;
 public class MissilController : MonoBehaviour
 {
     public GameObject projetil;
-    public int life = 10;
+    public GameObject ammo;
+    public int life = 7;
+
     bool naveEmCima = false;
+    bool disparando = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,9 +26,10 @@ public class MissilController : MonoBehaviour
     IEnumerator Disparar() {
         GameObject nave = GameObject.Find("Nave");
 
-        if(nave != null && naveEmCima)
+        if(nave != null && naveEmCima && !disparando)
         {
             GameObject disparo = (GameObject) Instantiate(projetil);
+            disparando = true;
 
             disparo.transform.position = transform.position;
             disparo.transform.Translate(0, 1, 0);
@@ -34,6 +38,7 @@ public class MissilController : MonoBehaviour
 
             yield return new WaitForSeconds(1);
 
+            disparando = false;
             StartCoroutine(Disparar());
         }
     }
@@ -52,6 +57,20 @@ public class MissilController : MonoBehaviour
             Disparar();
             yield return new WaitForSeconds(1);
             naveEmCima = false;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D coli)
+    {
+        if (coli.gameObject.tag == "projetil")
+        {
+            life--;
+
+            if (life == 0) {
+                GameObject balas = (GameObject) Instantiate(ammo);
+                balas.transform.position = new Vector3(transform.position.x, transform.position.y, -1);
+                Destroy(gameObject);
+            }
         }
     }
 }

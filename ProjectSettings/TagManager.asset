@@ -10,6 +10,8 @@ TagManager:
   - Inimigo4
   - projetil
   - Forte
+  - dano_inimigo
+  - missil
   layers:
   - Default
   - TransparentFX

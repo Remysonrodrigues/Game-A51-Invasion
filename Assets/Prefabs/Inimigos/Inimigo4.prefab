@@ -413,6 +413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projetil: {fileID: 3657574102522563758, guid: 5602002eb2f9a72429c81e2cec4bdfff,
     type: 3}
+  ammo: {fileID: 8295327825015636469, guid: 3f98777fcd4b22d43964dc4504a78a08, type: 3}
   life: 5
 --- !u!70 &-5786741719568308003
 CapsuleCollider2D:

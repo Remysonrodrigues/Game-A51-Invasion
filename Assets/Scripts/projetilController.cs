@@ -18,11 +18,14 @@ public class projetilController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D coli)
     {
-        //explosionAnimator.SetBool("ProjetilExplosion", true);
-        //if (coli.gameObject.tag != "Player")
-        //Instantiate(explosion, coli.transform.position, coli.transform.rotation);
-        // Destroy(coli.gameObject);
-        if (coli.gameObject.tag != "Player") {
+        if (coli.gameObject.tag == "dano_inimigo") {
+            GameObject bullet = GameObject.FindWithTag("dano_inimigo");
+            Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        }
+
+        if (coli.gameObject.tag != "Player" &&
+            coli.gameObject.tag != "dano_inimigo" &&
+            coli.gameObject.tag != "missil") {
             Destroy(gameObject);
         }
     }

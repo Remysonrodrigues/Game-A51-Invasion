@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2203544515968664794}
   m_Layer: 0
   m_Name: Projetil Inimigo3
-  m_TagString: Untagged
+  m_TagString: dano_inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

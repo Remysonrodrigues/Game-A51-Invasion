@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 8767025567511795995}
   - component: {fileID: -1577488418620849518}
   - component: {fileID: -1030640494753097286}
+  - component: {fileID: 816387536088016066}
   m_Layer: 0
   m_Name: Missil
-  m_TagString: Untagged
+  m_TagString: missil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,6 +131,22 @@ CapsuleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.26, y: 0.38}
+  m_Direction: 0
+--- !u!70 &816387536088016066
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3141077404948851831}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

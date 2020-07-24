@@ -5,14 +5,14 @@ using UnityEngine;
 public class NaveController : MonoBehaviour
 {
     public GameObject projetil;
-    public int life = 5;
+    public int life = 10;
     public int maxProjetil;
     public int projetils;
-    public bool podeRecarregar = true;    
+    public bool podeRecarregar = true;
 
     private Rigidbody2D naveRb;
     public float velociadeMove;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,12 +36,12 @@ public class NaveController : MonoBehaviour
             if ( projetils > 0)
             {
                 Instantiate(
-                              projetil, 
-                              transform.position + new Vector3(0, -0.1f, 0), 
+                              projetil,
+                              transform.position + new Vector3(0, -0.1f, 0),
                               transform.rotation
                             );
                 projetils -= 1;
-            }            
+            }
         }
         // Recarga
         if(projetils < maxProjetil && podeRecarregar == true)
@@ -54,8 +54,27 @@ public class NaveController : MonoBehaviour
     IEnumerator Recarregar()
     {
         yield return new WaitForSeconds(0.5f);
-        projetils += 1; 
+        projetils += 1;
         podeRecarregar = true;
     }
 
+    void OnCollisionEnter2D(Collision2D coli)
+    {
+        if (coli.gameObject.tag == "dano_inimigo")
+        {
+            life--;
+
+            if (life <= 0) {
+                Destroy(gameObject);
+            }
+        }
+        else if (coli.gameObject.tag == "missil")
+        {
+            life -= 2;
+
+            if (life <= 0) {
+                Destroy(gameObject);
+            }
+        }
+    }
 }

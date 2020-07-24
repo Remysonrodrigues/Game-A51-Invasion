@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6989501171781286338}
   - component: {fileID: 6600976258303098097}
   - component: {fileID: -8655262219039329033}
+  - component: {fileID: 8565246822128982358}
   m_Layer: 0
   m_Name: Projetil Inimigo4
-  m_TagString: Untagged
+  m_TagString: dano_inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,5 +134,21 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.62999994, y: 1.11}
+  m_Size: {x: 0.34, y: 0.76}
+  m_Direction: 0
+--- !u!70 &8565246822128982358
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657574102522563758}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.34, y: 0.76}
   m_Direction: 0
