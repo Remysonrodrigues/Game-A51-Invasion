@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 1821878290091483031}
   - component: {fileID: 590624410909571449}
   - component: {fileID: 1755057249610048431}
+  - component: {fileID: 3496472990999638460}
   m_Layer: 0
   m_Name: ammo
-  m_TagString: Untagged
+  m_TagString: balas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8295327825015636469}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.24, y: -1.01, z: -1}
-  m_LocalScale: {x: 0.72279453, y: 0.72279453, z: 0.72279453}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -108,3 +109,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3496472990999638460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8295327825015636469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc21663869652a4e9d013ec880fcf07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

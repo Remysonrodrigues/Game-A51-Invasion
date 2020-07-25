@@ -445,7 +445,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 1.2469623, y: 8.51}
   m_SpriteTilingProperty:
@@ -474,7 +474,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projetil: {fileID: 5288338475778627483, guid: 864757045d896a047a3c98dec80abdd8,
     type: 3}
-  ammo: {fileID: 7153882550702628429, guid: 36f5e24d534fbe044bd4d46faab41c23, type: 3}
+  ammo: {fileID: 8295327825015636469, guid: 3f98777fcd4b22d43964dc4504a78a08, type: 3}
+  lifeObject: {fileID: 8632518195434674352, guid: beda3f272697cdb4c970cf388a238011,
+    type: 3}
   life: 5
 --- !u!70 &3933144474109041577
 CapsuleCollider2D:

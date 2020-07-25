@@ -6,6 +6,7 @@ public class inimigoController : MonoBehaviour
 {
     public GameObject projetil;
     public GameObject ammo;
+    public GameObject lifeObject;
     public int life = 5;
 
     Animator animator;
@@ -72,7 +73,11 @@ public class inimigoController : MonoBehaviour
 
             if (life == 0) {
                 GameObject balas = (GameObject) Instantiate(ammo);
+                GameObject vida = (GameObject) Instantiate(lifeObject);
+
+                vida.transform.position = new Vector3(transform.position.x - 1, transform.position.y, -1);
                 balas.transform.position = new Vector3(transform.position.x, transform.position.y, -1);
+
                 Destroy(gameObject);
             }
         }

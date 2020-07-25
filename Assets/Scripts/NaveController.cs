@@ -43,19 +43,6 @@ public class NaveController : MonoBehaviour
                 projetils -= 1;
             }
         }
-        // Recarga
-        if(projetils < maxProjetil && podeRecarregar == true)
-        {
-            podeRecarregar = false;
-            StartCoroutine(Recarregar());
-        }
-    }
-
-    IEnumerator Recarregar()
-    {
-        yield return new WaitForSeconds(0.5f);
-        projetils += 1;
-        podeRecarregar = true;
     }
 
     void OnCollisionEnter2D(Collision2D coli)
@@ -75,6 +62,19 @@ public class NaveController : MonoBehaviour
             if (life <= 0) {
                 Destroy(gameObject);
             }
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "vida")
+        {
+            life += 5;
+        }
+
+        if (col.gameObject.tag == "balas")
+        {
+            projetils += 10;
         }
     }
 }
