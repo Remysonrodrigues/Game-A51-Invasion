@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4437217143043586883}
   - component: {fileID: 4437217143043586909}
   - component: {fileID: 2854781850920523577}
+  - component: {fileID: 7984419785036834836}
   m_Layer: 0
   m_Name: Base2
   m_TagString: Untagged
@@ -129,3 +130,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alien: {fileID: 5750128944704071740, guid: ebde5b5b3f8803f40a2521ffbf9e1441, type: 3}
   life: 10
+--- !u!95 &7984419785036834836
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4437217143043586882}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dbd3f9097ba46374ca20c82383f9f269, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

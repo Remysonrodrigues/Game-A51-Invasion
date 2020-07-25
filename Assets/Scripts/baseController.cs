@@ -6,10 +6,12 @@ public class baseController : MonoBehaviour
 {
     public GameObject alien;
     public int life = 10;
+
+    Animator animator;
     // Start is called before the first frame update
     void Start()
     {
-
+        animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,9 +25,10 @@ public class baseController : MonoBehaviour
         life--;
 
         if (life <= 0) {
+            animator.Play("baseExplosion");
             GameObject amigo = (GameObject) Instantiate(alien);
             amigo.transform.position = new Vector3(transform.position.x, transform.position.y, -1);
-            Destroy(gameObject);
+            Destroy(gameObject, 0.45f);
         }
     }
 }
