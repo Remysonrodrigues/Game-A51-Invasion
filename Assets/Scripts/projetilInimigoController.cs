@@ -5,8 +5,10 @@ using UnityEngine;
 public class projetilInimigoController : MonoBehaviour
 {
     public float speed;
-    private Vector3 _direction;
     public bool isReady;
+
+    private Vector3 _direction;
+    Animator animator;
 
     void Awake()
     {
@@ -17,6 +19,7 @@ public class projetilInimigoController : MonoBehaviour
      // Start is called before the first frame update
     void Start()
     {
+        animator = gameObject.GetComponent<Animator>();
         StartCoroutine(HoraDeDestruir());
     }
 
@@ -44,7 +47,9 @@ public class projetilInimigoController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.name == "Nave") {
-            Destroy(gameObject);
+            animator.Play("ProjetilExplosion");
+            isReady = false;
+            Destroy(gameObject, 0.2f);
         }
     }
 

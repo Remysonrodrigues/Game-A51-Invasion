@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6600976258303098097}
   - component: {fileID: -8655262219039329033}
   - component: {fileID: 8565246822128982358}
+  - component: {fileID: -2981169383795679223}
   m_Layer: 0
   m_Name: Projetil Inimigo4
   m_TagString: dano_inimigo
@@ -152,3 +153,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.34, y: 0.76}
   m_Direction: 0
+--- !u!95 &-2981169383795679223
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657574102522563758}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9f61ae4f91bcbbb48ab0d49e7d879db0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class MenuInicial : MonoBehaviour
 {
     int primeiraVez = 0;
-    int secunds= 36;
+
     public void ChamaCutscene()
-    {   
+    {
         if(primeiraVez == 0){
             UnityEngine.SceneManagement.SceneManager.LoadScene("Cutscene");
             primeiraVez++;
@@ -30,7 +30,7 @@ public class MenuInicial : MonoBehaviour
     {
          if(Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("SceneFase3");     
+            SceneManager.LoadScene("SceneFase3");
         }
     }
 
