@@ -10,11 +10,15 @@ public class MissilController : MonoBehaviour
 
     bool naveEmCima = false;
     bool disparando = false;
+    bool stop = false;
+    private Animator animator;
+    private CapsuleCollider2D missilCollider;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        animator = gameObject.GetComponent<Animator>();
+        missilCollider = gameObject.GetComponent<CapsuleCollider2D>();
     }
 
     // Update is called once per frame
@@ -45,7 +49,7 @@ public class MissilController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.name == "Nave") {
+        if (col.name == "Nave" && !stop) {
             naveEmCima = true;
             StartCoroutine(Disparar());
         }
@@ -53,7 +57,7 @@ public class MissilController : MonoBehaviour
 
     IEnumerator OnTriggerExit2D(Collider2D col)
     {
-        if (col.name == "Nave") {
+        if (col.name == "Nave" && !stop) {
             Disparar();
             yield return new WaitForSeconds(1);
             naveEmCima = false;
@@ -67,9 +71,14 @@ public class MissilController : MonoBehaviour
             life--;
 
             if (life == 0) {
+                stop = true;
+                Destroy(missilCollider);
+                transform.localScale = new Vector3(4, 4, 4);
+                animator.Play("torreExplosion");
+
                 GameObject balas = (GameObject) Instantiate(ammo);
                 balas.transform.position = new Vector3(transform.position.x, transform.position.y, -1);
-                Destroy(gameObject);
+                Destroy(gameObject, 1);
             }
         }
     }
