@@ -6,6 +6,7 @@ public class MissilController : MonoBehaviour
 {
     public GameObject projetil;
     public GameObject ammo;
+    public GameObject smoke;
     public int life = 7;
 
     bool naveEmCima = false;
@@ -30,20 +31,32 @@ public class MissilController : MonoBehaviour
     IEnumerator Disparar() {
         GameObject nave = GameObject.Find("Nave");
 
-        if(nave != null && naveEmCima && !disparando)
+        if(nave != null && naveEmCima)
         {
-            GameObject disparo = (GameObject) Instantiate(projetil);
-            disparando = true;
+            if (!disparando)
+            {
+                GameObject disparo = (GameObject) Instantiate(projetil);
 
-            disparo.transform.position = transform.position;
-            disparo.transform.Translate(0, 1, 0);
-            Vector3 direction = nave.transform.position - disparo.transform.position;
-            disparo.GetComponent<projetilInimigoController>().SetDirection(direction);
+                GameObject smokeObject = (GameObject) Instantiate(smoke);
+                smokeObject.transform.position = transform.position;
+                var smokeEffect = smokeObject.GetComponent<Animator>();
+                smokeEffect.Play("smokeRunning");
+                Destroy(smokeObject, 0.2f);
 
-            yield return new WaitForSeconds(1);
+                disparando = true;
 
-            disparando = false;
-            StartCoroutine(Disparar());
+                disparo.transform.position = transform.position;
+                disparo.transform.Translate(0, 1, 0);
+                Vector3 direction = nave.transform.position - disparo.transform.position;
+                disparo.GetComponent<projetilInimigoController>().SetDirection(direction);
+
+
+                yield return new WaitForSeconds(1);
+
+                disparando = false;
+
+                StartCoroutine(Disparar());
+            }
         }
     }
 

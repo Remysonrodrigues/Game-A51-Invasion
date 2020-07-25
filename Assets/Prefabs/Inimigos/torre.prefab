@@ -127,6 +127,7 @@ MonoBehaviour:
   projetil: {fileID: 3141077404948851831, guid: 84abbe3ec2a66ee44972f2c4cd030373,
     type: 3}
   ammo: {fileID: 8295327825015636469, guid: 3f98777fcd4b22d43964dc4504a78a08, type: 3}
+  smoke: {fileID: 8865613018859050033, guid: 1343ee81e17bc6b4d9070b1c69799e7a, type: 3}
   life: 7
 --- !u!70 &2217009819503869814
 CapsuleCollider2D:
@@ -174,7 +175,7 @@ GameObject:
   - component: {fileID: 6572566144856085970}
   - component: {fileID: 7620822098210184180}
   m_Layer: 0
-  m_Name: torre_base (1)
+  m_Name: torre_base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

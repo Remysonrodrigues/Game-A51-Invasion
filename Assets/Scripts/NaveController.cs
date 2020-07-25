@@ -28,24 +28,27 @@ public class NaveController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Movimentação
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-        naveRb.velocity = new Vector2(
-            horizontal * velociadeMove,
-            vertical * velociadeMove
-        );
-        // Disparos
-        if(Input.GetKeyDown(KeyCode.Space) && !stop)
+        if (!stop)
         {
-            if ( projetils > 0)
+            // Movimentação
+            float horizontal = Input.GetAxis("Horizontal");
+            float vertical = Input.GetAxis("Vertical");
+            naveRb.velocity = new Vector2(
+                horizontal * velociadeMove,
+                vertical * velociadeMove
+            );
+            // Disparos
+            if(Input.GetKeyDown(KeyCode.Space))
             {
-                Instantiate(
-                            projetil,
-                            transform.position + new Vector3(0, -0.1f, 0),
-                            transform.rotation
-                            );
-                projetils -= 1;
+                if ( projetils > 0)
+                {
+                    Instantiate(
+                                projetil,
+                                transform.position + new Vector3(0, -0.1f, 0),
+                                transform.rotation
+                                );
+                    projetils -= 1;
+                }
             }
         }
     }
