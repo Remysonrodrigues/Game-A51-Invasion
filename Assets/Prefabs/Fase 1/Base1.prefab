@@ -127,4 +127,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a403156ca579c4eb3e758aacb6e8ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alien: {fileID: 8745379446797267819, guid: d47813c5078ccb74688a186fa0b0c9e5, type: 3}
   life: 10

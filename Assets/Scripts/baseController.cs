@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class baseController : MonoBehaviour
 {
+    public GameObject alien;
     public int life = 10;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,8 @@ public class baseController : MonoBehaviour
         life--;
 
         if (life <= 0) {
+            GameObject amigo = (GameObject) Instantiate(alien);
+            amigo.transform.position = new Vector3(transform.position.x, transform.position.y, -1);
             Destroy(gameObject);
         }
     }

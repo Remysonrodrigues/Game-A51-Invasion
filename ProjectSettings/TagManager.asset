@@ -12,6 +12,8 @@ TagManager:
   - Forte
   - dano_inimigo
   - missil
+  - vida
+  - balas
   layers:
   - Default
   - TransparentFX
