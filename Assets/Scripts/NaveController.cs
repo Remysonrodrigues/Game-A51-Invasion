@@ -83,5 +83,21 @@ public class NaveController : MonoBehaviour
         {
             projetils += 10;
         }
+        else if (col.gameObject.tag == "amigo")
+        {
+            GameObject amigo = GameObject.FindWithTag("amigo");
+
+            if (amigo != null)
+            {
+                stop = true;
+                naveRb.velocity = new Vector2(0, 0);
+                transform.position = new Vector3(
+                    amigo.transform.position.x,
+                    2.5f,
+                    transform.position.z);
+
+                animator.Play("NaveResgatando");
+            }
+        }
     }
 }

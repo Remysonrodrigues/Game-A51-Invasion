@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8655262219039329033}
   - component: {fileID: 8565246822128982358}
   - component: {fileID: -2981169383795679223}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Projetil Inimigo4
   m_TagString: dano_inimigo
   m_Icon: {fileID: 0}

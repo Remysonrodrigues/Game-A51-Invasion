@@ -59,4 +59,4 @@ sysinfo.txt
 crashlytics-build.properties
 
 # Arquivo de versão, ignorar para evitar conflito entre merges
-ProjectVersion.txt
+ProjectSettings/ProjectVersion.txt

@@ -14,6 +14,7 @@ TagManager:
   - missil
   - vida
   - balas
+  - amigo
   layers:
   - Default
   - TransparentFX
