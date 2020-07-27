@@ -11,6 +11,7 @@ public class NaveController : MonoBehaviour
     public int projetils;
     public float velociadeMove;
     public HealthBarController healthBar;
+    public BulletBarController bulletsBar;
 
     public AudioSource[] _audio= new AudioSource[3];
 
@@ -52,7 +53,8 @@ public class NaveController : MonoBehaviour
                                 transform.position + new Vector3(0, -0.1f, 0),
                                 transform.rotation
                                 );
-                    projetils -= 1;
+                    projetils--;
+                    bulletsBar.use(-1);
                 }
             }
         }
@@ -93,6 +95,8 @@ public class NaveController : MonoBehaviour
         else if (col.gameObject.tag == "balas")
         {
             projetils += 10;
+            projetils = (projetils > maxProjetil) ? maxProjetil : projetils;
+            bulletsBar.use(10);
         }
         else if (col.gameObject.tag == "amigo")
         {

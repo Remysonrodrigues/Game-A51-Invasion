@@ -537,7 +537,7 @@ MonoBehaviour:
       MaxXPercent: 0
   - GameObjects:
     - {fileID: 4172848740972888790}
-    SpeedRatio: 0.2
+    SpeedRatio: 0.01
     RepositionLogic:
       PositionMode: 0
       ScaleHeight: 0
