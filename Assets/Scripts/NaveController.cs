@@ -93,6 +93,8 @@ public class NaveController : MonoBehaviour
 
             if (amigo != null)
             {
+                _audio[2].Play();
+
                 stop = true;
                 naveRb.velocity = new Vector2(0, 0);
                 transform.position = new Vector3(
