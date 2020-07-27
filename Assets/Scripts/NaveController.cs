@@ -5,11 +5,12 @@ using UnityEngine;
 public class NaveController : MonoBehaviour
 {
     public GameObject projetil;
-    public int life = 10;
+    public int maxLife = 15;
+    public int life;
     public int maxProjetil;
     public int projetils;
-    public bool podeRecarregar = true;
     public float velociadeMove;
+    public HealthBarController healthBar;
 
     private Rigidbody2D naveRb;
     Animator animator;
@@ -23,6 +24,7 @@ public class NaveController : MonoBehaviour
         naveCollider = GetComponent<PolygonCollider2D>();
         animator = gameObject.GetComponent<Animator>();
         projetils = maxProjetil;
+        life = maxLife;
     }
 
     // Update is called once per frame
@@ -58,15 +60,18 @@ public class NaveController : MonoBehaviour
         if (coli.gameObject.tag == "dano_inimigo")
         {
             life--;
+            healthBar.hit(-1);
         }
         else if (coli.gameObject.tag == "missil")
         {
             life -= 2;
+            healthBar.hit(-2);
         }
 
         if (life <= 0) {
             stop = true;
             Destroy(naveCollider);
+            healthBar.transform.localScale = new Vector3(0, 0, 0);
             transform.localScale = new Vector3(6, 6, 6);
             animator.Play("NaveExplosion");
             Destroy(gameObject, 1);
@@ -78,6 +83,8 @@ public class NaveController : MonoBehaviour
         if (col.gameObject.tag == "vida")
         {
             life += 5;
+            life = (life > maxLife) ? maxLife : life;
+            healthBar.hit(5);
         }
         else if (col.gameObject.tag == "balas")
         {

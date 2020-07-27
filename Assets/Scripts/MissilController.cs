@@ -7,6 +7,7 @@ public class MissilController : MonoBehaviour
     public GameObject projetil;
     public GameObject ammo;
     public GameObject smoke;
+    public HealthBarController healthBar;
     public int life = 7;
 
     bool naveEmCima = false;
@@ -82,10 +83,12 @@ public class MissilController : MonoBehaviour
         if (coli.gameObject.tag == "projetil")
         {
             life--;
+            healthBar.hit(-1);
 
             if (life == 0) {
                 stop = true;
                 Destroy(missilCollider);
+                healthBar.transform.localScale = new Vector3(0, 0, 0);
                 transform.localScale = new Vector3(4, 4, 4);
                 animator.Play("torreExplosion");
 

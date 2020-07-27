@@ -5,6 +5,7 @@ using UnityEngine;
 public class baseController : MonoBehaviour
 {
     public GameObject alien;
+    public HealthBarController healthBar;
     public int life = 10;
 
     Animator animator;
@@ -22,13 +23,17 @@ public class baseController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D coli)
     {
-        life--;
+        if (coli.gameObject.tag == "projetil")
+        {
+            life--;
+            healthBar.hit(-1);
 
-        if (life <= 0) {
-            animator.Play("baseExplosion");
-            GameObject amigo = (GameObject) Instantiate(alien);
-            amigo.transform.position = new Vector3(transform.position.x, transform.position.y, -1);
-            Destroy(gameObject, 0.45f);
+            if (life <= 0) {
+                animator.Play("baseExplosion");
+                GameObject amigo = (GameObject) Instantiate(alien);
+                amigo.transform.position = new Vector3(transform.position.x, transform.position.y, -1);
+                Destroy(gameObject, 0.45f);
+            }
         }
     }
 }

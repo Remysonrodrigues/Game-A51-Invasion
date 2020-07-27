@@ -7,6 +7,7 @@ public class inimigoController : MonoBehaviour
     public GameObject projetil;
     public GameObject ammo;
     public GameObject lifeObject;
+    public HealthBarController healthBar;
     public int life = 5;
 
     Animator animator;
@@ -70,6 +71,7 @@ public class inimigoController : MonoBehaviour
     {
         if (coli.gameObject.tag == "projetil") {
             life--;
+            healthBar.hit(-1);
 
             if (life == 0) {
                 GameObject balas = (GameObject) Instantiate(ammo);
