@@ -12,6 +12,8 @@ public class NaveController : MonoBehaviour
     public float velociadeMove;
     public HealthBarController healthBar;
 
+    public AudioSource[] _audio= new AudioSource[3];
+
     private Rigidbody2D naveRb;
     Animator animator;
     PolygonCollider2D naveCollider;
@@ -44,6 +46,7 @@ public class NaveController : MonoBehaviour
             {
                 if ( projetils > 0)
                 {
+                    _audio[0].Play();
                     Instantiate(
                                 projetil,
                                 transform.position + new Vector3(0, -0.1f, 0),
@@ -69,6 +72,7 @@ public class NaveController : MonoBehaviour
         }
 
         if (life <= 0) {
+            _audio[1].Play();
             stop = true;
             Destroy(naveCollider);
             healthBar.transform.localScale = new Vector3(0, 0, 0);
@@ -96,6 +100,8 @@ public class NaveController : MonoBehaviour
 
             if (amigo != null)
             {
+                _audio[2].Play();
+
                 stop = true;
                 naveRb.velocity = new Vector2(0, 0);
                 transform.position = new Vector3(

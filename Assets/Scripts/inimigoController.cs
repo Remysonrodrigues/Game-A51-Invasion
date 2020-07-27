@@ -14,6 +14,7 @@ public class inimigoController : MonoBehaviour
     bool naveEmCima = false;
     bool atirando = false;
 
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,7 @@ public class inimigoController : MonoBehaviour
         if (naveEmCima && !atirando) {
             float count = 0f;
             atirando = true;
-
+            GetComponent<AudioSource>().Play();
             for (int i = 0; i < 5; i++) {
                 GameObject disparo = (GameObject) Instantiate(projetil);
 
