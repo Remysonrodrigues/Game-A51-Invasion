@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SceneFase2.unity
     guid: ec3beb2f0a713e444878052292a744a7
   - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: bd1b1f0063b8b5043b6703684767425c
+  - enabled: 1
     path: Assets/Scenes/TransFase2.unity
     guid: a921eaf6cd0fa8a449157a341202b2ca
   - enabled: 1

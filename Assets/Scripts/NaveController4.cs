@@ -80,7 +80,8 @@ public class NaveController4 : MonoBehaviour
             healthBar.transform.localScale = new Vector3(0, 0, 0);
             transform.localScale = new Vector3(6, 6, 6);
             animator.Play("NaveExplosion");
-            Destroy(gameObject, 1);
+          //  Destroy(gameObject, 1);
+            StartCoroutine ("chamaGameOver");
         }
     }
 
@@ -123,6 +124,11 @@ public class NaveController4 : MonoBehaviour
     {
         yield return new WaitForSeconds (2.2f);
         UnityEngine.SceneManagement.SceneManager.LoadScene("TransFase4");
+    }
+    IEnumerator chamaGameOver()
+    {
+        yield return new WaitForSeconds (1.2f);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
     }
 }
 

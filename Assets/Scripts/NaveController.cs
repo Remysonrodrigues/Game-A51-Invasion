@@ -80,7 +80,7 @@ public class NaveController : MonoBehaviour
             healthBar.transform.localScale = new Vector3(0, 0, 0);
             transform.localScale = new Vector3(6, 6, 6);
             animator.Play("NaveExplosion");
-            Destroy(gameObject, 1);
+            StartCoroutine ("chamaGameOver");            
         }
     }
 
@@ -114,7 +114,6 @@ public class NaveController : MonoBehaviour
                     transform.position.z);
                     animator.Play("NaveResgatando");
                     StartCoroutine ("chamaProx");
-               
             }
         }
     }
@@ -122,5 +121,11 @@ public class NaveController : MonoBehaviour
     {
         yield return new WaitForSeconds (2.2f);
         UnityEngine.SceneManagement.SceneManager.LoadScene("TransFase1");
+    }
+
+     IEnumerator chamaGameOver()
+    {
+        yield return new WaitForSeconds (1.0f);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
     }
 }
