@@ -112,9 +112,15 @@ public class NaveController : MonoBehaviour
                     amigo.transform.position.x,
                     2.5f,
                     transform.position.z);
-
-                animator.Play("NaveResgatando");
+                    animator.Play("NaveResgatando");
+                    StartCoroutine ("chamaProx");
+               
             }
         }
+    }
+    IEnumerator chamaProx()
+    {
+        yield return new WaitForSeconds (2.2f);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("TransFase1");
     }
 }

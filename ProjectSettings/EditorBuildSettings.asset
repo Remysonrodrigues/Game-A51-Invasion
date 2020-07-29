@@ -14,4 +14,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneFase1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/TransFase1.unity
+    guid: 7355a04e4bfe73240902fbc0156188a2
+  - enabled: 1
+    path: Assets/Scenes/SceneFase2.unity
+    guid: ec3beb2f0a713e444878052292a744a7
+  - enabled: 1
+    path: Assets/Scenes/TransFase2.unity
+    guid: a921eaf6cd0fa8a449157a341202b2ca
+  - enabled: 1
+    path: Assets/Scenes/SceneFase4.unity
+    guid: 5cdbea3869771ae418ad4b5e97abcc1e
+  - enabled: 1
+    path: Assets/Scenes/SceneFase3.unity
+    guid: 9deb66566d3023747a05477dcddb150b
+  - enabled: 1
+    path: Assets/Scenes/TransFase3.unity
+    guid: 6f8ecc370a4612445a987ea70c7513f4
+  - enabled: 1
+    path: Assets/Scenes/TransFase4.unity
+    guid: 70ac3770d22ab31408a245d0db966ce0
   m_configObjects: {}

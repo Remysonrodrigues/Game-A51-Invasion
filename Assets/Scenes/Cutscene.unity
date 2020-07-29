@@ -293,7 +293,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Precione a tecla 'Espa\xE7o' para continuar.."
+  m_Text: "Pressione a tecla 'Espa\xE7o' para continuar.."
 --- !u!222 &199429309
 CanvasRenderer:
   m_ObjectHideFlags: 0
