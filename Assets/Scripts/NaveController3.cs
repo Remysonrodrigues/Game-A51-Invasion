@@ -78,6 +78,7 @@ public class NaveController3 : MonoBehaviour
             stop = true;
             Destroy(naveCollider);
             healthBar.transform.localScale = new Vector3(0, 0, 0);
+            bulletsBar.transform.localScale = new Vector3(0, 0, 0);
             transform.localScale = new Vector3(6, 6, 6);
             animator.Play("NaveExplosion");
             StartCoroutine ("chamaGameOver");
@@ -115,7 +116,7 @@ public class NaveController3 : MonoBehaviour
 
                 animator.Play("NaveResgatando");
                 StartCoroutine ("chamaProx");
-               
+
             }
         }
     }
